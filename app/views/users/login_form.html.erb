@@ -1,0 +1,26 @@
+<div class="main users-new">
+  <div class="container">
+    <div class="form-heading">ログイン</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+
+        <%= form_tag("/login") do %>
+        <div class="input-field">
+          <input id="mail-in" class="validate" name="email" value="<%= @email %>">
+          <label for="mail-in">メールアドレス</label>
+        </div>
+        <div class="input-field">
+          <input id="password-in" class="validate" type="password" name="password" value="<%= @password %>">
+          <label for="password-in">パスワード</label>
+        </div>
+          <input class="indigo darken-1" type="submit" value="ログイン">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
