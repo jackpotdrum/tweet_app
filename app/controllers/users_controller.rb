@@ -90,8 +90,4 @@ class UsersController < ApplicationController
     end
   end
 
-  def mypage
-
-  end
-
 end
